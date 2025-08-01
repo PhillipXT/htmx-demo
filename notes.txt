@@ -1,11 +1,25 @@
-Installation requirements:
+Install air:
 
-	Air:		go install github.com/cosmtrek/air@latest
-	Go LSP:		go install golang.org/x/tools/gopls@latest
+	> go install github.com/cosmtrek/air@latest
+
+Install the Go LSP:
+
+	> go install golang.org/x/tools/gopls@latest
 
 Project installation:
 
-	gh repo clone ThePrimeagen/fem-htmx-proj
-	mv fem-htmx-proj/ prime-htmx/
-	cd prime-htmx
-	go mod init github.com/PhillipXT/htmx-demo
+	> gh repo clone ThePrimeagen/fem-htmx-proj
+	> mv fem-htmx-proj/ prime-htmx/
+	> cd prime-htmx
+	> go mod init github.com/PhillipXT/htmx-demo
+
+Setting up the server:
+
+	> go get github.com/labstack/echo/v4
+	> go get github.com/labstack/echo/v4/middleware
+
+	If you encounter an error with the import, use "go mod tidy"
+
+Start the server with air:
+
+	> air
