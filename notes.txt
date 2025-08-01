@@ -1,0 +1,11 @@
+Installation requirements:
+
+	Air:		go install github.com/cosmtrek/air@latest
+	Go LSP:		go install golang.org/x/tools/gopls@latest
+
+Project installation:
+
+	gh repo clone ThePrimeagen/fem-htmx-proj
+	mv fem-htmx-proj/ prime-htmx/
+	cd prime-htmx
+	go mod init github.com/PhillipXT/htmx-demo
