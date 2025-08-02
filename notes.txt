@@ -1,3 +1,12 @@
+Tutorial:
+	FULL Introduction to HTML Using Golang
+	By the Primeagen @ Front End Masters
+	https://www.youtube.com/watch?v=x7v6SNIgJpE
+
+To run this site, use one of:
+	> air					// Script that runs the Echo web server and performs hot reloading
+	> go run cmd/main.go	// Run through Go, but doesn't do hot reloading
+
 Install air:
 
 	> go install github.com/cosmtrek/air@latest
