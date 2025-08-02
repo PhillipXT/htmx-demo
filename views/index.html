@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="/css/index.css">
 	<script src="https://unpkg.com/htmx.org/dist/htmx.min.js"></script>
 </head>
 <body>
@@ -55,9 +56,22 @@
 {{ end }}
 
 {{ block "contact" . }}
-	<div>
+	<div id="contact-{{ .ID }}" class="contact" style="display: flex;">
+		<div hx-indicator="#ci-{{ .ID }}" hx-target="#contact-{{ .ID }}" hx-swap="outerHTML swap:500ms" hx-delete="/contacts/{{ .ID }}" style="width: 1rem; cursor: pointer;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<polyline points="3 6 5 6 21 6" />
+				<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+				<path d="M10 11v6" />
+				<path d="M14 11v6" />
+				<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+			</svg>
+		</div>
 		Name: <span>{{ .Name }}</span>
 		Email: <span>{{ .Email }}</span>
+
+		<div id="ci-{{ .ID }}" class="htmx-indicator">
+			<img src="/images/bars.svg" alt="loading" style="width:  1rem;">
+		</div>
 	</div>
 {{ end }}
 
